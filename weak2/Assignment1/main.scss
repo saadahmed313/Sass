@@ -1,0 +1,6 @@
+@use './mixin/mixin.scss'as *;
+.element {
+    &:before {
+      @include arrow("top");
+    }
+  }

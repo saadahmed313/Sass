@@ -1,0 +1,39 @@
+%beforeContent
+{
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    border-bottom-color: red; 
+}
+@mixin  arrow($direction) {
+@if $direction =="top" {
+@extend %beforeContent;
+left: 50%;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+
+}
+@else if $direction =="right" {
+@extend %beforeContent;
+right: -40px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+}
+@else if $direction =="bottom" {
+@extend %beforeContent;
+bottom: -40px;
+left: 50%;
+-webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+
+}
+@else if $direction =="left" {
+@extend %beforeContent;
+left: -40px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+}
+}

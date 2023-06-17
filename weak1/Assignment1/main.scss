@@ -1,0 +1,36 @@
+$main: "school";
+$child: "box";
+$language: "en"; // English
+$gap: 20px;
+.#{$main} {
+    padding: #{$gap};
+   @if $language=="en"
+    {
+        direction: ltr;
+    }
+    @else if  $language=="ar" 
+    {
+        direction: rtl;
+    }
+    margin-right: #{$gap};
+    .#{$main}-#{$child}
+    {
+        padding: 10px;
+    }
+    &:hover .#{$main}-#{$child}
+    {
+        background-color: #eee;
+    }
+}
+// Output
+// .school {
+//     padding: 20px;
+//     direction: ltr;
+//     margin-left: 20px;
+//   }
+//   .school .school-box {
+//     padding: 10px;
+//   }
+//   .school:hover .school-box {
+//     background-color: #eee;
+//   }

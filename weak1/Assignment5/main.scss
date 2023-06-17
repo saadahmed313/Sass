@@ -1,0 +1,23 @@
+.parent {
+ //the & will  .parent and + and .sibling 
+    & + .sibling {
+        // all have margin in all direction auto except top have 10px
+      margin: auto {
+        top: 10px;
+      }
+      // the parent will .parent + .sibling and ~ and .last
+      & ~ .last {
+        //and have padding all direction 10px 
+        padding: 10px;
+      }
+    }
+  }
+//output of css
+// .parent  + .sibling 
+// {
+//     margin: 10px auto auto auto;
+// }
+// .parent  + .sibling  ~ .last
+// {
+//     padding: 10px;
+// }

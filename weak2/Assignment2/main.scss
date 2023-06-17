@@ -1,0 +1,8 @@
+$col:16;
+@for $i from 1 through $col
+{
+    .col-#{$i}
+{
+    width: percentage($i/$col);
+}
+}
